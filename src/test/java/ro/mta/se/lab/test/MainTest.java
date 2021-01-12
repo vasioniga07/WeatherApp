@@ -1,4 +1,5 @@
-package ro.mta.se.lab;
+package ro.mta.se.lab.test;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -8,7 +9,9 @@ import ro.mta.se.lab.model.ForecastGetter;
 import java.io.IOException;
 import java.net.URL;
 
-public class Main extends Application {
+public class MainTest extends Application {
+
+
     public static void main(String[] args)
     {
         launch(args);
@@ -17,7 +20,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws IOException {
         FXMLLoader loader = new FXMLLoader();
 
-        loader.setLocation(this.getClass().getResource("/view/ForecastView.fxml"));
+        loader.setLocation(this.getClass().getResource("/view/ForecastViewTest.fxml"));
         primaryStage.setScene(new Scene(loader.load()));
 
         primaryStage.show();

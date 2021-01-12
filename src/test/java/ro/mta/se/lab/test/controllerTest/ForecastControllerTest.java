@@ -1,4 +1,4 @@
-package ro.mta.se.lab.controller;
+package ro.mta.se.lab.test.controllerTest;
 import javafx.beans.Observable;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -7,17 +7,19 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import ro.mta.se.lab.model.Forecast;
 import ro.mta.se.lab.model.Location;
-import ro.mta.se.lab.model.WeatherReport;
+import  ro.mta.se.lab.test.model.WeatherReportTest;
 import java.io.*;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
-public class ForecastController {
+public class ForecastControllerTest {
 
 
 
-    @FXML
-    private Button weatherButton;
+
 
     @FXML
     private Button loadFileButton;
@@ -34,6 +36,26 @@ public class ForecastController {
     @FXML
     private TextField fileBar;
 
+    @FXML
+    private Label cityLabel;
+
+    @FXML
+    private Label dateLabel;
+
+    @FXML
+    private Label rainfallLabel;
+
+    @FXML
+    private Label rainfallDescLabel;
+
+    @FXML
+    private Label temperatureLabel;
+
+    @FXML
+    private Label humidityLabel;
+
+    @FXML
+    private Label windLabel;
 
 
     private ObservableList<String> observableLocations;
@@ -41,7 +63,7 @@ public class ForecastController {
 
     private ArrayList<Location> locations;
 
-    private WeatherReport weatherReport;
+    private WeatherReportTest weatherReport;
 
     public  void load_file()
     {
@@ -65,18 +87,18 @@ public class ForecastController {
             while ((st = br.readLine()) != null) {
                 String aux[]=st.split(" ");
 
-                 if(index>0)
-                 {
-                     int idLoc=Integer.parseInt(aux[0]); float latLoc=Float.parseFloat(aux[2]);
-                     String numeLoc=aux[1]; float longLoc=Float.parseFloat(aux[3]);
-                     String countryLoc=aux[4];
-                     locations.add(new Location(idLoc,numeLoc,latLoc,longLoc,countryLoc));
+                if(index>0)
+                {
+                    int idLoc=Integer.parseInt(aux[0]); float latLoc=Float.parseFloat(aux[2]);
+                    String numeLoc=aux[1]; float longLoc=Float.parseFloat(aux[3]);
+                    String countryLoc=aux[4];
+                    locations.add(new Location(idLoc,numeLoc,latLoc,longLoc,countryLoc));
 
-                     if(countryBox.getItems().contains(aux[4])==false)
+                    if(countryBox.getItems().contains(aux[4])==false)
                         countryBox.getItems().add(aux[4]);
 
-                  }
-                 index++;
+                }
+                index++;
             }
         }catch (Exception e) {
             e.printStackTrace();
@@ -96,7 +118,7 @@ public class ForecastController {
             if(countryBox.getSelectionModel().getSelectedItem().equals(aux.getCountryCode()))
             {
                 if(cityBox.getItems().contains(name)==false)
-                cityBox.getItems().add(aux.get_name());
+                    cityBox.getItems().add(aux.get_name());
 
             }
         }
@@ -121,6 +143,22 @@ public class ForecastController {
 
     public  void showWeather()
     {
+        this.weatherReport=new WeatherReportTest();
+        try {
+            this.weatherReport.setUp();
+            this.weatherReport.retrieveForecast();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Forecast AuxForecast=this.weatherReport.getForecast();
+        this.cityLabel.setText("TestCity");
+        this.dateLabel.setText(AuxForecast.getForecastTime());
+        this.rainfallLabel.setText(AuxForecast.getRainfallMain());
+        this.rainfallDescLabel.setText(AuxForecast.getRainfallDesc());
+        this.temperatureLabel.setText(String.valueOf(AuxForecast.getTemperatureF()+" F"));
+        this.windLabel.setText(String.valueOf(AuxForecast.getWind()));
+        this.humidityLabel.setText(String.valueOf(AuxForecast.getHumidity())+"%");
+
 
     }
 
