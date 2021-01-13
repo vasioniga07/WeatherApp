@@ -19,6 +19,10 @@ public class Location {
         this.countryCode = countryCode;
     }
 
+    public int getIdLocation() {
+        return idLocation;
+    }
+
     public String get_name()
     {
         return this.Name;

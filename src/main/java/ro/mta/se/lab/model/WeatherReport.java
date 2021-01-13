@@ -10,6 +10,8 @@ WeatherReport {
         return forecast;
     }
 
+
+
     public Location getLocation() {
         return location;
     }
@@ -24,8 +26,11 @@ WeatherReport {
 
     public  void  retrieveForecast(Location location)
     {
+        this.forecastGetter=new ForecastGetter();
         this.forecast=this.forecastGetter.request_data(this.location);
 
     }
+
+
 
 }

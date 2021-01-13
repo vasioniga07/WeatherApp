@@ -6,12 +6,9 @@ private double temperatureF;
 private  double temperatureC;
 private  double wind;
 private  double humidity;
-
-
-    private  String rainfallMain;
+private  String rainfallMain;
 private  String rainfallDesc;
 private  String forecastTime;
-
 
     public  double convert_temp(double tempF)
     {

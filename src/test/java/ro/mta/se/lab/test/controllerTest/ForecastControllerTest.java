@@ -7,6 +7,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import org.junit.Test;
+import org.mockito.Spy;
 import ro.mta.se.lab.model.Forecast;
 import ro.mta.se.lab.model.Location;
 import  ro.mta.se.lab.test.model.WeatherReportTest;
@@ -14,6 +16,11 @@ import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
+import  ro.mta.se.lab.model.WeatherReport;
 
 public class ForecastControllerTest {
 
@@ -70,7 +77,7 @@ public class ForecastControllerTest {
 
         locations=new ArrayList<Location>();
 
-        File file = new File(fileBar.getText());
+        File file = new File("./src/main/resources/Cities.txt");
 
 
         BufferedReader br = null;
@@ -125,6 +132,7 @@ public class ForecastControllerTest {
 
     }
 
+
     public Location get_current_location()
     {
         Location aux_loc;
@@ -140,13 +148,13 @@ public class ForecastControllerTest {
 
         return  null;
     }
-
-    public  void showWeather()
+      public  void showWeather()
     {
         this.weatherReport=new WeatherReportTest();
         try {
             this.weatherReport.setUp();
             this.weatherReport.retrieveForecast();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -160,6 +168,23 @@ public class ForecastControllerTest {
         this.humidityLabel.setText(String.valueOf(AuxForecast.getHumidity())+"%");
 
 
+
+
+    }
+
+    @Test
+    public  void showWeatherTest()
+    {
+        this.weatherReport=new WeatherReportTest();
+        try {
+            this.weatherReport.setUp();
+            this.weatherReport.retrieveForecast();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        verify(this.weatherReport.mockFG).request_data(any());
+        verify(this.weatherReport.mockFG,times(1)).request_data(any());
     }
 
 

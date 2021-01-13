@@ -8,14 +8,45 @@
    <children>
       <Pane layoutX="142.0" layoutY="68.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">         <children>
             <ComboBox fx:id="countryBox" layoutX="34.0" layoutY="115.0" onAction="#load_cities" prefWidth="150.0" promptText="Country" />
-            <ComboBox fx:id="cityBox" layoutX="234.0" layoutY="115.0" prefWidth="150.0" promptText="City" />
-            <Button fx:id="weatherButton" layoutX="428.0" layoutY="115.0" mnemonicParsing="false" onMouseClicked="#showWeather" text="Show Weather" />
+            <ComboBox fx:id="cityBox" layoutX="234.0" layoutY="115.0" onAction="#showWeather" prefWidth="150.0" promptText="City" />
             <TextField fx:id="fileBar" layoutX="34.0" layoutY="33.0" prefHeight="25.0" prefWidth="320.0" text="./src/main/resources/Cities.txt" />
             <Button fx:id="loadFileButton" layoutX="428.0" layoutY="33.0" mnemonicParsing="false" onMouseClicked="#load_file" text="Load File" />
             <Label fx:id="alertLabel" layoutX="43.0" layoutY="334.0" text="Info:">
                <font>
                   <Font size="16.0" />
                </font></Label>
+            <Label layoutX="34.0" layoutY="87.0" text="Country" />
+            <Label layoutX="234.0" layoutY="87.0" text="City" />
+            <Label fx:id="cityLabel" layoutX="41.0" layoutY="160.0" text="CityLabel">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="timeLabel" layoutX="43.0" layoutY="200.0" text="Time">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="weatherLabel" layoutX="41.0" layoutY="235.0" text="WeatherMain">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="weatherDescLabel" layoutX="41.0" layoutY="268.0" text="WeatherDesc">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="humidityLabel" layoutX="234.0" layoutY="162.0" text="Humidity">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="windLabel" layoutX="234.0" layoutY="201.0" text="Wind">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>

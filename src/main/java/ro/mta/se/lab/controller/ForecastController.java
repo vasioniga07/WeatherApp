@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import ro.mta.se.lab.model.Forecast;
 import ro.mta.se.lab.model.Location;
 import ro.mta.se.lab.model.WeatherReport;
 import java.io.*;
@@ -33,6 +34,24 @@ public class ForecastController {
 
     @FXML
     private TextField fileBar;
+
+    @FXML
+    private Label cityLabel;
+
+    @FXML
+    private Label timeLabel;
+
+    @FXML
+    private Label weatherLabel;
+
+    @FXML
+    private Label weatherDescLabel;
+
+    @FXML
+    private Label humidityLabel;
+
+    @FXML
+    private Label windLabel;
 
 
 
@@ -106,6 +125,10 @@ public class ForecastController {
     public Location get_current_location()
     {
         Location aux_loc;
+        if(cityBox.getSelectionModel().getSelectedItem()==null)
+        {
+            return  null;
+        }
 
         for(int i=0;i<locations.size();i++)
         {
@@ -115,12 +138,37 @@ public class ForecastController {
                 return  aux_loc;
             }
         }
-
         return  null;
+
     }
 
     public  void showWeather()
     {
+
+            this.weatherReport = new WeatherReport();
+            Location location1 = this.get_current_location();
+            if(location1==null)
+            {
+                alertLabel.setText("Info:Select city");
+                return;
+            }
+            else
+            {
+                alertLabel.setText("Info:");
+            }
+            this.weatherReport.setLocation(location1);
+            this.weatherReport.retrieveForecast(location1);
+            Forecast forecast1 = this.weatherReport.getForecast();
+
+            this.cityLabel.setText(location1.get_name());
+            this.timeLabel.setText(forecast1.getForecastTime());
+            this.weatherLabel.setText(forecast1.getRainfallMain());
+            this.weatherDescLabel.setText(forecast1.getRainfallDesc());
+            this.humidityLabel.setText(String.valueOf(forecast1.getHumidity()));
+            this.windLabel.setText(String.valueOf(forecast1.getWind()));
+
+
+
 
     }
 
