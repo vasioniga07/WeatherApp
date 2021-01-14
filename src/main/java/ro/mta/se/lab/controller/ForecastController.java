@@ -8,6 +8,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.layout.Pane;
 import ro.mta.se.lab.model.Forecast;
 import ro.mta.se.lab.model.Location;
 import ro.mta.se.lab.model.Logger;
@@ -59,6 +60,10 @@ public class ForecastController {
     @FXML
     private ImageView myicon;
 
+    @FXML
+    private Label temperatureLabel;
+    @FXML
+    private Pane pane;
 
     private ObservableList<String> observableLocations;
 
@@ -69,8 +74,7 @@ public class ForecastController {
 
     public  void load_file()
     {
-
-        locations=new ArrayList<Location>();
+         locations=new ArrayList<Location>();
 
         File file = new File(fileBar.getText());
         Logger logger=Logger.getLoggerInstance();
@@ -190,7 +194,7 @@ public class ForecastController {
             this.weatherDescLabel.setText("Rainfall Description: "+forecast1.getRainfallDesc());
             this.humidityLabel.setText("Humidity: "+String.valueOf(forecast1.getHumidity())+"%");
             this.windLabel.setText("Wind: "+String.valueOf(forecast1.getWind())+"km/h");
-
+            this.temperatureLabel.setText("Temperature: "+(int)forecast1.getTemperatureC()+" C/"+(int)forecast1.getTemperatureF()+" F");
             Logger logger=Logger.getLoggerInstance();
         try {
             logger.log_event("log.txt","Succes interogation {City: "+location1.get_name()+" Country: "+location1.getCountryCode()

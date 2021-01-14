@@ -11,11 +11,11 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.mta.se.lab.controller.ForecastController">
    <children>
-      <Pane layoutX="142.0" layoutY="68.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">         <children>
-            <ComboBox fx:id="countryBox" layoutX="34.0" layoutY="115.0" onAction="#load_cities" prefWidth="150.0" promptText="Country" />
-            <ComboBox fx:id="cityBox" layoutX="234.0" layoutY="115.0" onAction="#showWeather" prefWidth="150.0" promptText="City" />
-            <TextField fx:id="fileBar" layoutX="34.0" layoutY="33.0" prefHeight="25.0" prefWidth="379.0" text="./src/main/resources/Cities.txt" />
-            <Button fx:id="loadFileButton" layoutX="458.0" layoutY="33.0" mnemonicParsing="false" onMouseClicked="#load_file" text="Load File" />
+      <Pane fx:id="pane" layoutX="142.0" layoutY="68.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: ffdd6e;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">         <children>
+            <ComboBox fx:id="countryBox" layoutX="34.0" layoutY="115.0" onAction="#load_cities" prefWidth="150.0" promptText="Country" style="-fx-background-color: ffffff;" />
+            <ComboBox fx:id="cityBox" layoutX="234.0" layoutY="115.0" onAction="#showWeather" prefWidth="150.0" promptText="City" style="-fx-background-color: ffffff;" />
+            <TextField fx:id="fileBar" layoutX="34.0" layoutY="33.0" prefHeight="25.0" prefWidth="379.0" style="-fx-background-color: ffffff;" text="./src/main/resources/Cities.txt" />
+            <Button fx:id="loadFileButton" layoutX="458.0" layoutY="33.0" mnemonicParsing="false" onMouseClicked="#load_file" style="-fx-background-color: ffffff;" text="Load File" />
             <Label fx:id="alertLabel" layoutX="43.0" layoutY="334.0" text="Info: Load file please!">
                <font>
                   <Font size="16.0" />
@@ -27,17 +27,17 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label fx:id="timeLabel" layoutX="43.0" layoutY="200.0" text="Time">
+            <Label fx:id="timeLabel" layoutX="43.0" layoutY="236.0" text="Time">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="weatherLabel" layoutX="41.0" layoutY="235.0" text="WeatherMain">
+            <Label fx:id="weatherLabel" layoutX="41.0" layoutY="271.0" text="WeatherMain">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label fx:id="weatherDescLabel" layoutX="41.0" layoutY="268.0" text="WeatherDesc">
+            <Label fx:id="weatherDescLabel" layoutX="42.0" layoutY="298.0" text="WeatherDesc">
                <font>
                   <Font size="18.0" />
                </font>
@@ -53,6 +53,11 @@
                </font>
             </Label>
             <ImageView fx:id="myicon" fitHeight="124.0" fitWidth="182.0" layoutX="341.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="temperatureLabel" layoutX="39.0" layoutY="199.0" text="Temperature">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
    </children>

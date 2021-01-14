@@ -47,7 +47,7 @@ public class  ForecastGetter {
        try
         {
             int cityID=  _location.getIdLocation();
-            URL url= new URL("http://api.openweathermap.org/data/2.5/weather?id="+cityID+"&appid="+appID);
+            URL url= new URL("http://api.openweathermap.org/data/2.5/weather?id="+cityID+"&appid="+appID+"&units=imperial");
             connection= (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
             connection.setConnectTimeout(7000); connection.setReadTimeout(7000);
