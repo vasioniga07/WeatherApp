@@ -1,0 +1,46 @@
+[ 14-01-2021 13:00:56 ]:Succes interogation {City: Razvilka Country: RURainfall: SnowRainfall Description: snowHumidity: 78.0%Wind: 3.0km/h}
+[ 14-01-2021 13:01:00 ]:Succes interogation {City: Moscow Country: RURainfall: SnowRainfall Description: snowHumidity: 72.0%Wind: 6.0km/h}
+[ 14-01-2021 13:01:03 ]:Succes interogation {City: Tarascon Country: FRRainfall: ClearRainfall Description: clear skyHumidity: 50.0%Wind: 7.2km/h}
+[ 14-01-2021 13:01:04 ]:Succes interogation {City: Ploufragan Country: FRRainfall: CloudsRainfall Description: overcast cloudsHumidity: 100.0%Wind: 1.79km/h}
+[ 14-01-2021 13:17:37 ]:4 cities loaded.
+[ 14-01-2021 13:17:41 ]:Succes interogation {City: Razvilka Country: RURainfall: SnowRainfall Description: snowHumidity: 85.0%Wind: 4.0km/h}
+[ 14-01-2021 13:17:43 ]:Succes interogation {City: Ploufragan Country: FRRainfall: CloudsRainfall Description: overcast cloudsHumidity: 100.0%Wind: 2.24km/h}
+[ 14-01-2021 13:17:44 ]:Succes interogation {City: Tarascon Country: FRRainfall: ClearRainfall Description: clear skyHumidity: 44.0%Wind: 7.2km/h}
+[ 14-01-2021 13:27:59 ]:4 cities loaded.
+[ 14-01-2021 13:28:03 ]:Succes interogation {City: Razvilka Country: RURainfall: SnowRainfall Description: snowHumidity: 85.0%Wind: 4.0km/h}
+[ 14-01-2021 13:57:05 ]:4 cities loaded.
+[ 14-01-2021 13:57:08 ]:Succes interogation {City: Razvilka Country: RURainfall: SnowRainfall Description: light snowHumidity: 85.0%Wind: 3.0km/h}
+[ 14-01-2021 13:58:19 ]:4 cities loaded.
+[ 14-01-2021 13:58:23 ]:Succes interogation {City: Razvilka Country: RURainfall: SnowRainfall Description: light snowHumidity: 85.0%Wind: 3.0km/h}
+[ 14-01-2021 13:58:25 ]:Succes interogation {City: Moscow Country: RURainfall: SnowRainfall Description: snowHumidity: 78.0%Wind: 6.0km/h}
+[ 14-01-2021 13:59:30 ]:4 cities loaded.
+[ 14-01-2021 13:59:33 ]:Succes interogation {City: Ploufragan Country: FRRainfall: CloudsRainfall Description: overcast cloudsHumidity: 100.0%Wind: 7.6km/h}
+[ 14-01-2021 14:02:38 ]:4 cities loaded.
+[ 14-01-2021 14:02:41 ]:Succes interogation {City: Razvilka Country: RURainfall: SnowRainfall Description: light snowHumidity: 85.0%Wind: 3.0km/h}
+[ 14-01-2021 14:03:40 ]:4 cities loaded.
+[ 14-01-2021 14:03:43 ]:Succes interogation {City: Razvilka Country: RURainfall: SnowRainfall Description: light snowHumidity: 85.0%Wind: 3.0km/h}
+[ 14-01-2021 14:03:45 ]:Succes interogation {City: Moscow Country: RURainfall: SnowRainfall Description: snowHumidity: 78.0%Wind: 6.0km/h}
+[ 14-01-2021 14:06:24 ]:4 cities loaded.
+[ 14-01-2021 14:06:26 ]:Succes interogation {City: Moscow Country: RURainfall: SnowRainfall Description: snowHumidity: 78.0%Wind: 6.0km/h}
+[ 14-01-2021 14:20:36 ]:4 cities loaded.
+[ 14-01-2021 14:20:38 ]:Succes interogation {City: Razvilka Country: RURainfall: SnowRainfall Description: snowHumidity: 78.0%Wind: 3.0km/h}
+[ 14-01-2021 14:20:40 ]:Succes interogation {City: Moscow Country: RURainfall: SnowRainfall Description: light snowHumidity: 78.0%Wind: 6.0km/h}
+[ 14-01-2021 14:23:25 ]:4 cities loaded.
+[ 14-01-2021 14:23:28 ]:Succes interogation {City: Razvilka Country: RURainfall: SnowRainfall Description: snowHumidity: 78.0%Wind: 3.0km/h}
+[ 14-01-2021 14:23:34 ]:Succes interogation {City: Ploufragan Country: FRRainfall: CloudsRainfall Description: overcast cloudsHumidity: 93.0%Wind: 6.69km/h}
+[ 14-01-2021 14:23:34 ]:Succes interogation {City: Tarascon Country: FRRainfall: ClearRainfall Description: clear skyHumidity: 41.0%Wind: 6.17km/h}
+[ 14-01-2021 14:23:37 ]:Succes interogation {City: Razvilka Country: RURainfall: SnowRainfall Description: snowHumidity: 78.0%Wind: 3.0km/h}
+[ 14-01-2021 14:23:37 ]:Succes interogation {City: Moscow Country: RURainfall: SnowRainfall Description: snowHumidity: 72.0%Wind: 5.0km/h}
+[ 14-01-2021 14:27:16 ]:4 cities loaded.
+[ 14-01-2021 14:27:18 ]:Succes interogation {City: Razvilka Country: RURainfall: SnowRainfall Description: snowHumidity: 78.0%Wind: 3.0km/h}
+[ 14-01-2021 14:27:20 ]:Succes interogation {City: Moscow Country: RURainfall: SnowRainfall Description: snowHumidity: 72.0%Wind: 5.0km/h}
+[ 14-01-2021 14:27:22 ]:Succes interogation {City: Tarascon Country: FRRainfall: ClearRainfall Description: clear skyHumidity: 41.0%Wind: 6.17km/h}
+[ 14-01-2021 14:27:37 ]:Succes interogation {City: Ploufragan Country: FRRainfall: CloudsRainfall Description: overcast cloudsHumidity: 93.0%Wind: 6.69km/h}
+[ 14-01-2021 14:27:39 ]:Succes interogation {City: Moscow Country: RURainfall: SnowRainfall Description: snowHumidity: 72.0%Wind: 5.0km/h}
+[ 14-01-2021 14:27:40 ]:Succes interogation {City: Razvilka Country: RURainfall: SnowRainfall Description: snowHumidity: 78.0%Wind: 3.0km/h}
+[ 14-01-2021 14:27:42 ]:Succes interogation {City: Tarascon Country: FRRainfall: ClearRainfall Description: clear skyHumidity: 41.0%Wind: 6.17km/h}
+[ 14-01-2021 14:27:43 ]:Succes interogation {City: Ploufragan Country: FRRainfall: CloudsRainfall Description: overcast cloudsHumidity: 93.0%Wind: 6.69km/h}
+[ 14-01-2021 14:27:49 ]:Succes interogation {City: Razvilka Country: RURainfall: SnowRainfall Description: snowHumidity: 78.0%Wind: 3.0km/h}
+[ 14-01-2021 14:27:50 ]:Succes interogation {City: Moscow Country: RURainfall: SnowRainfall Description: snowHumidity: 72.0%Wind: 5.0km/h}
+[ 14-01-2021 14:27:52 ]:Succes interogation {City: Tarascon Country: FRRainfall: ClearRainfall Description: clear skyHumidity: 41.0%Wind: 6.17km/h}
+[ 14-01-2021 14:27:53 ]:Succes interogation {City: Ploufragan Country: FRRainfall: CloudsRainfall Description: overcast cloudsHumidity: 93.0%Wind: 6.69km/h}

@@ -16,9 +16,25 @@ import java.util.Date;
 
 
 public class  ForecastGetter {
+    private static ForecastGetter getterInstance = null;
 
-    private String appID="75d4823f6bec3a385f7d4e93e55bdbd3";
+    private static String appID="75d4823f6bec3a385f7d4e93e55bdbd3";
     private  JSONObject jsonObject;
+
+
+    private ForecastGetter()
+    {
+
+    }
+
+    public  static  ForecastGetter get_instance()
+    {
+        if (getterInstance == null)
+            getterInstance=new ForecastGetter();
+
+        return getterInstance;
+    }
+
 
     public  Forecast request_data(Location _location) {
 
@@ -112,8 +128,10 @@ public class  ForecastGetter {
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         Date date = new Date(timeForecast*1000);
         String forecastTime=formatter.format(date);
+        String icon=this.jsonObject.getJSONArray("weather").getJSONObject(0).getString("icon");
 
-        Forecast to_return=new Forecast(temperature,wind,rainfallMain,rainfallDesc,forecastTime,humidity);
+        Forecast to_return=new Forecast(temperature,wind,rainfallMain,rainfallDesc,forecastTime,humidity,icon);
+
         return  to_return;
 
 

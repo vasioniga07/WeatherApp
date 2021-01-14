@@ -26,7 +26,7 @@ WeatherReport {
 
     public  void  retrieveForecast(Location location)
     {
-        this.forecastGetter=new ForecastGetter();
+        this.forecastGetter=ForecastGetter.get_instance();
         this.forecast=this.forecastGetter.request_data(this.location);
 
     }

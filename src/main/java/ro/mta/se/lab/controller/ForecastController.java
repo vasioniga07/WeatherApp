@@ -7,9 +7,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import ro.mta.se.lab.model.Forecast;
 import ro.mta.se.lab.model.Location;
+import ro.mta.se.lab.model.Logger;
 import ro.mta.se.lab.model.WeatherReport;
+import javafx.scene.image.ImageView;
 import java.io.*;
 import java.util.ArrayList;
 
@@ -53,6 +56,8 @@ public class ForecastController {
     @FXML
     private Label windLabel;
 
+    @FXML
+    private ImageView myicon;
 
 
     private ObservableList<String> observableLocations;
@@ -68,13 +73,18 @@ public class ForecastController {
         locations=new ArrayList<Location>();
 
         File file = new File(fileBar.getText());
-
-
+        Logger logger=Logger.getLoggerInstance();
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(file));
         } catch (FileNotFoundException e) {
             alertLabel.setText("Alert:File doesn't exist or could not be open!");
+            try {
+                logger.log_event("log.txt","Error { The City file couldn't be opened }");
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
+
             e.printStackTrace();
         }
 
@@ -99,8 +109,20 @@ public class ForecastController {
             }
         }catch (Exception e) {
             e.printStackTrace();
-            alertLabel.setText("Alert: Could not be read!");
+            alertLabel.setText("Alert: File could not be read!");
+            try {
+                logger.log_event("log.txt","Error { The City file couldn't be read }");
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
         }
+
+        try {
+            logger.log_event("log.txt",(index-1)+" cities loaded.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        this.alertLabel.setText("Info:");
     }
 
     public  void load_cities()
@@ -119,6 +141,8 @@ public class ForecastController {
 
             }
         }
+
+
 
     }
 
@@ -160,12 +184,26 @@ public class ForecastController {
             this.weatherReport.retrieveForecast(location1);
             Forecast forecast1 = this.weatherReport.getForecast();
 
-            this.cityLabel.setText(location1.get_name());
-            this.timeLabel.setText(forecast1.getForecastTime());
-            this.weatherLabel.setText(forecast1.getRainfallMain());
-            this.weatherDescLabel.setText(forecast1.getRainfallDesc());
-            this.humidityLabel.setText(String.valueOf(forecast1.getHumidity()));
-            this.windLabel.setText(String.valueOf(forecast1.getWind()));
+            this.cityLabel.setText("City: "+location1.get_name()+" Country: "+location1.getCountryCode());
+            this.timeLabel.setText("Time: "+forecast1.getForecastTime());
+            this.weatherLabel.setText("Rainfall: "+forecast1.getRainfallMain());
+            this.weatherDescLabel.setText("Rainfall Description: "+forecast1.getRainfallDesc());
+            this.humidityLabel.setText("Humidity: "+String.valueOf(forecast1.getHumidity())+"%");
+            this.windLabel.setText("Wind: "+String.valueOf(forecast1.getWind())+"km/h");
+
+            Logger logger=Logger.getLoggerInstance();
+        try {
+            logger.log_event("log.txt","Succes interogation {City: "+location1.get_name()+" Country: "+location1.getCountryCode()
+            +"Rainfall: "+forecast1.getRainfallMain()+"Rainfall Description: "+forecast1.getRainfallDesc()+
+                    "Humidity: "+String.valueOf(forecast1.getHumidity())+"%"+ "Wind: "+String.valueOf(forecast1.getWind())+"km/h}");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        File file = new File("./src/main/resources/images/"+forecast1.getIcon()+".png");
+        Image image = new Image(file.toURI().toString());
+        this.myicon.setImage(image);
+
 
 
 

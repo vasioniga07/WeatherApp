@@ -32,7 +32,7 @@ public class WeatherReportTest {
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         when(mockFG.request_data(any())).thenReturn(
-                new Forecast(77,5.0,"sunny","warm",formatter.format(date),90));
+                new Forecast(77,5.0,"sunny","warm",formatter.format(date),90,"01d"));
 
     }
 

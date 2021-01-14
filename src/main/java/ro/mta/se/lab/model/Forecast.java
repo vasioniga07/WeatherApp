@@ -9,6 +9,7 @@ private  double humidity;
 private  String rainfallMain;
 private  String rainfallDesc;
 private  String forecastTime;
+private  String image;
 
     public  double convert_temp(double tempF)
     {
@@ -20,7 +21,7 @@ private  String forecastTime;
         return forecastTime;
     }
 
-    public Forecast(double temperatureF, double wind, String rainfallMain, String rainfallDesc, String _forecastTime, double _humidity) {
+    public Forecast(double temperatureF, double wind, String rainfallMain, String rainfallDesc, String _forecastTime, double _humidity,String _image) {
         this.temperatureF = temperatureF;
         this.temperatureC=this.convert_temp(temperatureF);
         this.wind = wind;
@@ -28,8 +29,12 @@ private  String forecastTime;
         this.rainfallDesc = rainfallDesc;
         this.forecastTime = _forecastTime;
         this.humidity=_humidity;
+        this.image=_image;
     }
 
+    public String getIcon() {
+        return image;
+    }
 
     public double getHumidity() {
         return humidity;

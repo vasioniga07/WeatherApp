@@ -14,7 +14,7 @@ public class ForecastTest {
     {
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-        Forecast forecast1=new Forecast(26.6,-5.0,"sunny","warm",formatter.format(date),90);
+        Forecast forecast1=new Forecast(26.6,-5.0,"sunny","warm",formatter.format(date),90,"01d");
         assertEquals(-5.0,forecast1.getWind(),0.001);
         assertEquals("sunny",forecast1.getRainfallMain());
         assertEquals("warm",forecast1.getRainfallDesc());
