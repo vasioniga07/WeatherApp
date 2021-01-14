@@ -200,8 +200,8 @@ public class ForecastController {
             e.printStackTrace();
         }
 
-        File file = new File("./src/main/resources/images/"+forecast1.getIcon()+".png");
-        Image image = new Image(file.toURI().toString());
+
+        Image image = new Image("http://openweathermap.org/img/wn/"+forecast1.getIcon()+"@2x.png");
         this.myicon.setImage(image);
 
 
