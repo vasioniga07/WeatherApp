@@ -6,9 +6,9 @@ Aplicația își propune obținerea informațiilor meteorologice din diferite or
 
 Informațiile care pot fi obțiunute sunt:
 
-*Temperatura
-*Viteza vântului
-*Precipitațiile curente
+* Temperatura
+* Viteza vântului
+* Precipitațiile curente
 
 2.Utilizarea Aplicației
 
@@ -28,5 +28,6 @@ Parsarea JSON-ului s-a realizat cu biblioteca org.json (https://mvnrepository.co
 Interfața grafică a fost realizată cu ajutorul bibliotecii JAVAFX (https://openjfx.io/).
 
 
-##### Realizator aplicatiei
+##### [Realizator aplicatie](https://github.com/vasioniga07)
+
 Oniga Gabriel-Vasile C-114A
