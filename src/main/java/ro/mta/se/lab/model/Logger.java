@@ -8,6 +8,13 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
+/**
+ *  Funcția singleton Logger are rol de
+ *  jurnalizare.
+ *
+ *
+ */
+
 public class Logger {
 
     private static Logger loggerInstance = null;

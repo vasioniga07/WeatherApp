@@ -65,7 +65,7 @@ public class ForecastController {
     @FXML
     private Pane pane;
 
-    private ObservableList<String> observableLocations;
+
 
 
     private ArrayList<Location> locations;
@@ -188,24 +188,37 @@ public class ForecastController {
             this.weatherReport.retrieveForecast(location1);
             Forecast forecast1 = this.weatherReport.getForecast();
 
-            this.cityLabel.setText("City: "+location1.get_name()+" Country: "+location1.getCountryCode());
-            this.timeLabel.setText("Time: "+forecast1.getForecastTime());
-            this.weatherLabel.setText("Rainfall: "+forecast1.getRainfallMain());
-            this.weatherDescLabel.setText("Rainfall Description: "+forecast1.getRainfallDesc());
-            this.humidityLabel.setText("Humidity: "+String.valueOf(forecast1.getHumidity())+"%");
-            this.windLabel.setText("Wind: "+String.valueOf(forecast1.getWind())+"km/h");
-            this.temperatureLabel.setText("Temperature: "+(int)forecast1.getTemperatureC()+" C/"+(int)forecast1.getTemperatureF()+" F");
+            this.cityLabel.setText("City: "
+                    +location1.get_name()+" Country: "+location1.getCountryCode());
+            this.timeLabel.setText("Time: "
+                    +forecast1.getForecastTime());
+            this.weatherLabel.setText("Rainfall: "
+                    +forecast1.getRainfallMain());
+            this.weatherDescLabel.setText("Rainfall Description: "
+                    +forecast1.getRainfallDesc());
+            this.humidityLabel.setText("Humidity: "
+                    +String.valueOf(forecast1.getHumidity())+"%");
+            this.windLabel.setText("Wind: "
+                    +String.valueOf(forecast1.getWind())+"km/h");
+            this.temperatureLabel.setText("Temperature: "
+                    +(int)forecast1.getTemperatureC()
+                    +" C/"+(int)forecast1.getTemperatureF()+" F");
             Logger logger=Logger.getLoggerInstance();
         try {
-            logger.log_event("log.txt","Succes interogation {City: "+location1.get_name()+" Country: "+location1.getCountryCode()
-            +"Rainfall: "+forecast1.getRainfallMain()+"Rainfall Description: "+forecast1.getRainfallDesc()+
-                    "Humidity: "+String.valueOf(forecast1.getHumidity())+"%"+ "Wind: "+String.valueOf(forecast1.getWind())+"km/h}");
+            logger.log_event("log.txt","Succes interogation {City: "
+                    +location1.get_name()+" Country: "+
+                    location1.getCountryCode()
+            +"Rainfall: "+forecast1.getRainfallMain()+"Rainfall Description: "+
+                    forecast1.getRainfallDesc()+
+                    "Humidity: "+String.valueOf(forecast1.getHumidity())+"%"
+                    + "Wind: "+String.valueOf(forecast1.getWind())+"km/h}");
         } catch (IOException e) {
             e.printStackTrace();
         }
 
 
-        Image image = new Image("http://openweathermap.org/img/wn/"+forecast1.getIcon()+"@2x.png");
+        Image image = new Image("http://openweathermap.org/img/wn/"
+                +forecast1.getIcon()+"@2x.png");
         this.myicon.setImage(image);
 
 

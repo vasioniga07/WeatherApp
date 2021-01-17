@@ -177,3 +177,29 @@
 [ 14-01-2021 17:21:15 ]:Succes interogation {City: Cluj-Napoca Country: RORainfall: SnowRainfall Description: light snowHumidity: 93.0%Wind: 2.3km/h}
 [ 14-01-2021 17:21:16 ]:Succes interogation {City: Bucharest Country: RORainfall: ClearRainfall Description: clear skyHumidity: 80.0%Wind: 6.91km/h}
 [ 14-01-2021 17:21:17 ]:Succes interogation {City: Sighetu_Marmației Country: RORainfall: MistRainfall Description: mistHumidity: 100.0%Wind: 5.75km/h}
+[ 14-01-2021 17:29:18 ]:23 cities loaded.
+[ 14-01-2021 17:29:24 ]:Succes interogation {City: Sighetu_Marmației Country: RORainfall: MistRainfall Description: mistHumidity: 100.0%Wind: 5.75km/h}
+[ 14-01-2021 17:29:33 ]:Succes interogation {City: Moscow Country: RURainfall: SnowRainfall Description: snowHumidity: 78.0%Wind: 8.95km/h}
+[ 14-01-2021 17:29:44 ]:Succes interogation {City: Tokyo Country: JPRainfall: CloudsRainfall Description: few cloudsHumidity: 50.0%Wind: 17.27km/h}
+[ 14-01-2021 17:29:54 ]:Succes interogation {City: Baltimore Country: USRainfall: CloudsRainfall Description: broken cloudsHumidity: 70.0%Wind: 4.27km/h}
+[ 14-01-2021 17:29:56 ]:Succes interogation {City: New_York Country: USRainfall: CloudsRainfall Description: few cloudsHumidity: 65.0%Wind: 3.44km/h}
+[ 14-01-2021 17:32:40 ]:23 cities loaded.
+[ 14-01-2021 17:32:44 ]:Succes interogation {City: New_York Country: USRainfall: CloudsRainfall Description: few cloudsHumidity: 65.0%Wind: 3.44km/h}
+[ 17-01-2021 19:36:19 ]:23 cities loaded.
+[ 17-01-2021 19:36:23 ]:Succes interogation {City: Moscow Country: RURainfall: ClearRainfall Description: clear skyHumidity: 77.0%Wind: 4.47km/h}
+[ 17-01-2021 19:36:25 ]:Succes interogation {City: Hamburg Country: DERainfall: SnowRainfall Description: light snowHumidity: 74.0%Wind: 6.91km/h}
+[ 17-01-2021 19:36:27 ]:Succes interogation {City: Berlin Country: DERainfall: CloudsRainfall Description: broken cloudsHumidity: 86.0%Wind: 6.91km/h}
+[ 17-01-2021 19:36:29 ]:Succes interogation {City: Tokyo Country: JPRainfall: CloudsRainfall Description: few cloudsHumidity: 70.0%Wind: 9.22km/h}
+[ 17-01-2021 19:36:30 ]:Succes interogation {City: Kyoto Country: JPRainfall: ClearRainfall Description: clear skyHumidity: 77.0%Wind: 1.01km/h}
+[ 17-01-2021 19:36:34 ]:Succes interogation {City: Cluj-Napoca Country: RORainfall: MistRainfall Description: mistHumidity: 86.0%Wind: 2.3km/h}
+[ 17-01-2021 19:36:35 ]:Succes interogation {City: Bucharest Country: RORainfall: ClearRainfall Description: clear skyHumidity: 74.0%Wind: 4.61km/h}
+[ 17-01-2021 19:36:36 ]:Succes interogation {City: Sighetu_Marmației Country: RORainfall: CloudsRainfall Description: overcast cloudsHumidity: 86.0%Wind: 3.44km/h}
+[ 17-01-2021 19:36:38 ]:Succes interogation {City: New_York Country: USRainfall: CloudsRainfall Description: broken cloudsHumidity: 52.0%Wind: 14.97km/h}
+[ 17-01-2021 19:36:39 ]:Succes interogation {City: Baltimore Country: USRainfall: CloudsRainfall Description: broken cloudsHumidity: 46.0%Wind: 13.8km/h}
+[ 17-01-2021 19:36:43 ]:Succes interogation {City: Stockholm Country: SERainfall: CloudsRainfall Description: broken cloudsHumidity: 93.0%Wind: 3.44km/h}
+[ 17-01-2021 19:36:46 ]:Succes interogation {City: Upsala Country: SERainfall: CloudsRainfall Description: overcast cloudsHumidity: 93.0%Wind: 4.61km/h}
+[ 17-01-2021 19:36:50 ]:Succes interogation {City: Manchester Country: GBRainfall: CloudsRainfall Description: overcast cloudsHumidity: 93.0%Wind: 6.91km/h}
+[ 17-01-2021 19:36:51 ]:Succes interogation {City: Liverpool Country: GBRainfall: ClearRainfall Description: clear skyHumidity: 87.0%Wind: 8.05km/h}
+[ 17-01-2021 21:24:01 ]:23 cities loaded.
+[ 17-01-2021 21:24:03 ]:Succes interogation {City: Ploufragan Country: FRRainfall: ClearRainfall Description: clear skyHumidity: 81.0%Wind: 4.61km/h}
+[ 17-01-2021 21:24:03 ]:Succes interogation {City: Tarascon Country: FRRainfall: ClearRainfall Description: clear skyHumidity: 53.0%Wind: 11.5km/h}

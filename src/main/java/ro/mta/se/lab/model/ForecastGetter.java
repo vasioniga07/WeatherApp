@@ -15,7 +15,23 @@ import java.util.ArrayList;
 import java.util.Date;
 
 
+/**
+ *  Această clasă singleton are rolul de a interoga API-ul openweather map
+ *  și de a returna un obiect de tip forecast.
+ *
+ *
+ */
+
+
+
+
 public class  ForecastGetter {
+
+    /**
+     *  getterInstance este intstanța clase ForecastGetter
+     *  JSONObject este obiectul obținu în urma interogării API-ului.
+     *  appID este cheia API-ului
+     */
     private static ForecastGetter getterInstance = null;
 
     private static String appID="75d4823f6bec3a385f7d4e93e55bdbd3";
@@ -47,7 +63,8 @@ public class  ForecastGetter {
        try
         {
             int cityID=  _location.getIdLocation();
-            URL url= new URL("http://api.openweathermap.org/data/2.5/weather?id="+cityID+"&appid="+appID+"&units=imperial");
+            URL url= new URL("http://api.openweathermap.org/data/2.5/weather?id="
+                    +cityID+"&appid="+appID+"&units=imperial");
             connection= (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
             connection.setConnectTimeout(7000); connection.setReadTimeout(7000);
@@ -121,16 +138,20 @@ public class  ForecastGetter {
         double wind=this.jsonObject.getJSONObject("wind").getDouble("speed");
         double humidity = this.jsonObject.getJSONObject("main").getDouble("humidity");
         double temperature=this.jsonObject.getJSONObject("main").getDouble("temp");
-        String rainfallMain=this.jsonObject.getJSONArray("weather").getJSONObject(0).getString("main");
-        String rainfallDesc=this.jsonObject.getJSONArray("weather").getJSONObject(0).getString("description");
+        String rainfallMain=this.jsonObject.
+                getJSONArray("weather").getJSONObject(0).getString("main");
+        String rainfallDesc=this.jsonObject.
+                getJSONArray("weather").getJSONObject(0).getString("description");
         long timeForecast=this.jsonObject.getLong("dt");
         System.out.println(timeForecast);
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         Date date = new Date(timeForecast*1000);
         String forecastTime=formatter.format(date);
-        String icon=this.jsonObject.getJSONArray("weather").getJSONObject(0).getString("icon");
+        String icon=this.jsonObject.getJSONArray("weather").
+                getJSONObject(0).getString("icon");
 
-        Forecast to_return=new Forecast(temperature,wind,rainfallMain,rainfallDesc,forecastTime,humidity,icon);
+        Forecast to_return=new Forecast(temperature,wind,rainfallMain,
+                rainfallDesc,forecastTime,humidity,icon);
 
         return  to_return;
 

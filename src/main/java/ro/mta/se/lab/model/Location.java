@@ -1,5 +1,14 @@
 package ro.mta.se.lab.model;
 
+/**
+ *  Această clasă modelează o localitate, așa cum este
+ *  salvată în baza de date openweathermap, respectiv și în fișierul
+ *  cu orașele.
+ *
+ */
+
+
+
 public class Location {
     private int idLocation;
     private String Name;

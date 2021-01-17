@@ -1,5 +1,15 @@
 package ro.mta.se.lab.model;
 
+
+/**
+ *  Această clasă modelează o prognoză meteo.
+ *
+ *
+ */
+
+
+
+
 public class Forecast {
 
 private double temperatureF;
@@ -21,7 +31,8 @@ private  String image;
         return forecastTime;
     }
 
-    public Forecast(double temperatureF, double wind, String rainfallMain, String rainfallDesc, String _forecastTime, double _humidity,String _image) {
+    public Forecast(double temperatureF, double wind, String rainfallMain,
+                    String rainfallDesc, String _forecastTime, double _humidity,String _image) {
         this.temperatureF = temperatureF;
         this.temperatureC=this.convert_temp(temperatureF);
         this.wind = wind;

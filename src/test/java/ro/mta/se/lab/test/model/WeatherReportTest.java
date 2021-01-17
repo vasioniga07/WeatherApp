@@ -43,6 +43,7 @@ public class WeatherReportTest {
 
         Forecast forecast1=mockFG.request_data(any());
 
+
         assertEquals(5.0,forecast1.getWind(),0.001);
         assertEquals("sunny",forecast1.getRainfallMain());
         assertEquals("warm",forecast1.getRainfallDesc());
